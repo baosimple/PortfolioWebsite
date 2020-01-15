@@ -1,0 +1,154 @@
+@import normalize
+@import skeleton
+
+/* Base Styles */
+
+body
+  font-family: 'Open Sans', sans-serif
+
+h1
+  color: #ccc
+  font-weight: 300
+
+figure
+  margin: auto
+
+img 
+	height: 300px
+  width: auto
+	border-radius: 250px 
+
+/* Parallax */
+
+.landing
+  position: relative
+  height: 800px
+  background:
+    image: url(images/legsBG.png)
+    size: cover
+    position: top center
+    attachment: fixed
+  overflow: hidden
+
+.logo
+  height: 300px
+  width: 100%
+  background:
+    image: url(images/logo.png)
+    position: center
+    repeat: no-repeat
+    size: 400px
+  position: absolute
+  z-index: 1
+  top: 50%
+  margin-top: -350px
+
+.legs
+  width: 1100px
+  height: 600px
+  background:
+    image: url(images/legs.png)
+    repeat: no-repeat
+    position: bottom
+  position: absolute
+  left: 50%
+  margin-left: -600px
+  top: 200px
+  z-index: 2
+
+/* sections */
+
+#about
+  height: 800px
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+    background-color: FFF
+
+#projects
+  position: relative
+  height: 800px
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+  background:
+    image: url(images/projectsBG.jpg)
+    size: cover
+    position: top center
+    attachment: fixed
+
+#contact
+  height: 700px
+  text-align: center
+
+form
+  margin-top: 50px
+
+.formControl
+  width: 600px
+  background: transparent
+  border: none
+  outline: none
+  border-bottom: 1px solid gray
+  color: gray
+  font-size: 18px
+
+input
+  height: 45px
+
+input[type=submit]
+  margin-top: 20px
+  transition: 0.4s
+
+input[type=submit]:hover
+  color: white
+  background: black
+
+.formStyle
+  input, textArea
+    opacity: 0
+    transform: translateX(-20px)
+    transition: all 0.8s ease-in-out
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+  a
+    color: inherit 
+    opacity: 0
+    transform: translateX(20px)
+    transition: all 2s ease-in-out
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+/* Navigation Bar */
+
+nav
+  width: 100%
+  height: 80px
+  background-color: #000
+  line-height: 80px
+  text-align: center
+  position: relative
+  background-color: #0004
+  z-index: 4
+
+nav ul li
+  list-style-type: none
+  display: inline-block
+  transition: 0.5s all
+
+nav ul li:hover
+  background-color: #f39d1a
+
+nav ul li a
+  text-decoration: none
+  color: #fff 
+  padding: 30px 
